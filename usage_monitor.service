@@ -1,0 +1,13 @@
+[Unit]
+Description=Usage monitor
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /root/usage_monitor/app.py
+WorkingDirectory=/root/usage_monitor
+Restart=on-failure
+
+
+[Install]
+WantedBy=multi-user.target
