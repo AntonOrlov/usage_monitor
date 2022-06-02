@@ -46,7 +46,7 @@ def cpu_utilization():
 
 def disk_utilization():
   total, used, free = shutil.disk_usage("/")
-  return used / total * 100
+  return (total - free) / total * 100
 
 
 if __name__ == "__main__":
